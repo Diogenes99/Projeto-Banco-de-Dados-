@@ -7,9 +7,17 @@ include("database.php");
 
 <head>
   <title>Criar Tabela</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <div class="navbar">
+    <a href="painel.php">Painel</a>
+    <a class="active" href="create_table.php">Criar Tabelas</a>
+    <a href="view_tables.php">Visualizar Tabelas</a>
+    <a href="insert_data.php">Preencher Tabelas</a>
+    <a href="delete_data.php">Excluir Dados</a>
+  </div>
   <h2>Criar Nova Tabela</h2>
   <form method="post" action="create_table.php">
     <label for="table_name">Nome da Tabela:</label><br>
