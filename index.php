@@ -15,8 +15,13 @@ include("database.php");
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
       margin: 0;
+    }
+
+    .logo {
+      margin-bottom: 20px;
     }
 
     .registrar {
@@ -25,11 +30,11 @@ include("database.php");
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: 300px;
+      text-align: center;
     }
 
     .registrar h2 {
       margin-top: 0;
-      text-align: center;
       color: #333;
     }
 
@@ -76,7 +81,7 @@ include("database.php");
     }
   </style>
 </head>
-
+<img src="logo.png" alt="" class="logo">
 <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="POST">
 
   <div class="registrar">
