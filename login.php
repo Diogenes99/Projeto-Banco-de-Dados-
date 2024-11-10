@@ -53,8 +53,13 @@ if (isset($_POST["usuario"]) || isset($_POST["senha"])) {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       height: 100vh;
       margin: 0;
+    }
+
+    .logo {
+      margin-bottom: 20px;
     }
 
     .login {
@@ -63,11 +68,11 @@ if (isset($_POST["usuario"]) || isset($_POST["senha"])) {
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: 300px;
+      text-align: center;
     }
 
     .login h2 {
       margin-top: 0;
-      text-align: center;
       color: #333;
     }
 
@@ -116,7 +121,9 @@ if (isset($_POST["usuario"]) || isset($_POST["senha"])) {
 </head>
 
 <body>
+  <img src="logo.png" alt="" class="logo">
   <div class="login">
+
     <form action="" method="POST">
       <h2>Login</h2>
       <p>
