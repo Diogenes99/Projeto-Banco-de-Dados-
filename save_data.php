@@ -2,6 +2,9 @@
 include("database.php");
 include("protect.php");
 
+$texto = "preencher mais dados";
+$link = "insert_data.php";
+
 function getDbConnection()
 {
   $servername = "localhost";
@@ -48,7 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
   }
 
-  echo "Dados inseridos com sucesso na tabela '$table_name'!";
+  echo "Dados inseridos com sucesso na tabela '$table_name'! <br>";
+  echo "<a href='$link'>$texto</a>";
   $mysqli->close();
 }
 ?>
