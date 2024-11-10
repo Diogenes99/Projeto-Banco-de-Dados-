@@ -46,26 +46,96 @@ if (isset($_POST["usuario"]) || isset($_POST["senha"])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .login h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    .login p {
+      margin: 15px 0;
+    }
+
+    .login label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .login input[type="text"],
+    .login input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    .login button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .login button:hover {
+      background-color: #45a049;
+    }
+
+    .login a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    .login a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-  <form action="" method="POST">
-    <h2>Login</h2>
-    <p>
-      <label for="usuario">usuario</label>
-      <input type="text" name="usuario">
-    </p>
-    <p>
-      <label for="senha">Senha</label>
-      <input type="password" name="senha">
-    </p>
-    <p>
-      <button type="sumbit" value="entrar">Entrar</button>
-    </p>
-    <p>
-      Não possui uma conta? <a href="index.php">Registre-se</a>
-    </p>
-  </form>
+  <div class="login">
+    <form action="" method="POST">
+      <h2>Login</h2>
+      <p>
+        <label for="usuario">usuario</label>
+        <input type="text" name="usuario">
+      </p>
+      <p>
+        <label for="senha">senha</label>
+        <input type="password" name="senha">
+      </p>
+      <p>
+        <button type="sumbit" value="entrar">Entrar</button>
+      </p>
+      <p>
+        Não possui uma conta? <a href="index.php">Registre-se</a>
+      </p>
+    </form>
+  </div>
+
 </body>
 
 </html>
