@@ -48,39 +48,17 @@ $mysqli->close();
 
 <head>
   <title>Visualizar Tabelas</title>
-  <style>
-    .table-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .table-wrapper {
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th,
-    td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <div class="navbar">
+    <a href="painel.php">Painel</a>
+    <a href="create_table.php">Criar Tabelas</a>
+    <a class="active" href="view_tables.php">Visualizar Tabelas</a>
+    <a href="insert_data.php">Preencher Tabelas</a>
+    <a href="delete_data.php">Excluir Dados</a>
+  </div>
   <h2>Visualizar Dados de Tabelas</h2>
   <div class="table-container">
     <?php
@@ -125,7 +103,6 @@ $mysqli->close();
       echo "</div>";
     }
     ?>
-  </div>
 </body>
 
 </html>
